@@ -57,7 +57,4 @@ lift_proto*
 
 # Pax Runner (for easy OSGi launching)
 runner
-output/*.pdf
-output/*.xls
-src/main/webapp/WEB-INF/jetty-env.xml
-sbt
+
