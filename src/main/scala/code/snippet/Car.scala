@@ -50,7 +50,7 @@ class Car {
       S.redirectTo("/show")
     }
 
-    "#carbrand" #> ajaxSelect(CarMaker.findAll.map(_.carMaker.toString).map(m => (m, m)), Full(carMaker), {
+    "#carbrand" #> SHtml.ajaxUntrustedSelect(CarMaker.findAll.map(_.carMaker.toString).map(m => (m, m)), Full(carMaker), {
       m => carMaker = m; After(200, replace(carMaker))
     }) &
       "#carmodel" #> SHtml.select(modelChoice(carMaker), Empty, carModel = _) &
